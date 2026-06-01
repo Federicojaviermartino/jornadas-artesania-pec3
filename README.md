@@ -9,7 +9,7 @@ Esta entrega recrea dos paginas de la PEC 2 reescribiendo su HTML y CSS con util
 | Recurso | URL |
 | --- | --- |
 | Repositorio PEC 3 | <https://github.com/Federicojaviermartino/jornadas-artesania-pec3> |
-| Despliegue PEC 3 (Netlify) | `<PENDIENTE: nuevo deploy de Netlify de la PEC 3>` |
+| Despliegue PEC 3 (Netlify) | <https://jornadas-artesania-pec3.netlify.app/> |
 | Despliegue PEC 2 (referencia) | <https://jornadas-artesania-uoc.netlify.app/> |
 
 ## Paginas
