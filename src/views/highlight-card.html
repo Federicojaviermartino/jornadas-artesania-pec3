@@ -1,0 +1,20 @@
+<!-- Componente: tarjeta destacada (portada). Usa una container query:
+     al superar 480px de ancho propio, pasa a maquetacion horizontal.
+     Locals: img, alt, tag, title, text -->
+<article
+  class="card group @container transition duration-300 hover:-translate-y-1 hover:shadow-lg @[480px]:grid @[480px]:grid-cols-[200px_1fr]"
+>
+  <div class="aspect-[16/10] overflow-hidden bg-cream @[480px]:aspect-auto @[480px]:h-full">
+    <img
+      src="{{ img }}"
+      alt="{{ alt }}"
+      loading="lazy"
+      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+    />
+  </div>
+  <div class="flex flex-col items-start gap-2 p-6">
+    <span class="pill bg-ochre-light text-clay-dark">{{ tag }}</span>
+    <h3 class="text-lg text-ink">{{ title }}</h3>
+    <p class="text-muted">{{ text }}</p>
+  </div>
+</article>

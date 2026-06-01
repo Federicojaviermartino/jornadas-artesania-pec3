@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Conoce a las maestras y maestros artesanos que participan en las Jornadas: alfareria, vidrio, tejidos, madera, encajes y mas."
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <title>Ponentes y artesanos | Jornadas de Artesania</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <include src="./views/header.html"></include>
+
+    <main id="main-content">
+      <!-- Cabecera de pagina interior -->
+      <section class="banner-bg px-4 pb-16 pt-32 text-center text-white sm:px-8" aria-labelledby="page-banner-title">
+        <div class="mx-auto max-w-[1200px]">
+          <h1 id="page-banner-title" class="font-serif text-headline font-bold text-white">Ponentes y artesanos</h1>
+          <p class="mx-auto mt-4 max-w-[720px] text-lg text-cream">
+            Catorce maestras y maestros artesanos. Cada uno aporta su oficio y su mirada.
+          </p>
+          <p class="mt-6 text-sm text-cream">
+            <a href="./index.html" class="text-cream underline-offset-2 hover:text-white hover:underline">Portada</a>
+            <i class="fa-solid fa-chevron-right mx-2" aria-hidden="true"></i>
+            Ponentes
+          </p>
+        </div>
+      </section>
+
+      <!-- Listado de ponentes -->
+      <section class="py-16 md:py-24" aria-label="Listado de ponentes">
+        <div class="mx-auto max-w-[1200px] px-4 sm:px-8">
+          <div class="mx-auto mb-16 max-w-[720px] text-center">
+            <h2 class="section-heading mb-4 md:text-headline">El programa humano de las jornadas</h2>
+            <p class="text-muted">
+              Filtra por disciplina para encontrar las charlas y talleres que mas te interesan. Pulsa en cada ficha para ver el detalle, el horario y la sala.
+            </p>
+          </div>
+
+          <!-- Filtros por disciplina; el JS (main.js) alterna la clase .active -->
+          <div class="mb-12 flex flex-wrap justify-center gap-2" role="group" aria-label="Filtrar ponentes">
+            <button type="button" class="btn-filter active" data-speaker-filter="all">Todos</button>
+            <button type="button" class="btn-filter" data-speaker-filter="ceramica">Ceramica</button>
+            <button type="button" class="btn-filter" data-speaker-filter="textil">Textil</button>
+            <button type="button" class="btn-filter" data-speaker-filter="madera">Madera</button>
+            <button type="button" class="btn-filter" data-speaker-filter="vidrio">Vidrio</button>
+          </div>
+
+          <!-- Reticula con flexbox; cada ficha es un componente reutilizable -->
+          <div class="flex flex-wrap gap-8">
+            <include src="./views/speaker-card.html" locals='{"rootClass":"basis-full bg-gradient-to-br from-cream to-ochre-light","badgeClass":"bg-wood","nameClass":"text-2xl","discipline":"ceramica","img":"./assets/images/speaker-1.jpg","alt":"Retrato de Margarita Olivares","badge":"Conferencia inaugural","role":"Ceramica tradicional","name":"Margarita Olivares","bio":"Treinta años al torno y al horno. Su taller en La Bisbal recupera tecnicas medievales y forma a la nueva generacion de alfareras de la comarca.","topicIcon":"fa-microphone","topic":"Charla inaugural: viernes 12, 11:00","links":[{"p":"fa-solid","i":"fa-globe","label":"Web de Margarita Olivares"},{"p":"fa-brands","i":"fa-instagram","label":"Instagram de Margarita Olivares"}]}'></include>
+            <include src="./views/speaker-card.html" locals='{"rootClass":"flex-1 basis-[280px]","badgeClass":"bg-clay","nameClass":"text-lg","discipline":"textil","img":"./assets/images/speaker-2.jpg","alt":"Retrato de Lucia Hernandez","badge":"Taller","role":"Encaje de bolillos","name":"Lucia Hernandez","bio":"Encajera de cuarta generacion. Imparte talleres familiares y ha colaborado con disenadores de moda contemporanea.","topicIcon":"fa-screwdriver-wrench","topic":"Sabado 13, sala B","links":[{"p":"fa-brands","i":"fa-instagram","label":"Instagram"}]}'></include>
+            <include src="./views/speaker-card.html" locals='{"rootClass":"flex-1 basis-[280px]","badgeClass":"bg-clay","nameClass":"text-lg","discipline":"madera","img":"./assets/images/speaker-3.jpg","alt":"Retrato de David Pereira","badge":"Charla","role":"Carpinteria fina","name":"David Pereira","bio":"Restaurador de mobiliario antiguo y profesor en la escuela de oficios. Defensor de la madera local y los acabados naturales.","topicIcon":"fa-microphone","topic":"Domingo 14, 12:30","links":[{"p":"fa-solid","i":"fa-globe","label":"Web"}]}'></include>
+            <include src="./views/speaker-card.html" locals='{"rootClass":"flex-1 basis-[280px]","badgeClass":"bg-clay","nameClass":"text-lg","discipline":"vidrio","img":"./assets/images/speaker-4.jpg","alt":"Retrato de Ana Riquelme","badge":"Demostracion","role":"Vidrio soplado","name":"Ana Riquelme","bio":"Crea piezas de iluminacion para arquitectura contemporanea. Su demostracion incluye una pieza que sera subastada para causa social.","topicIcon":"fa-fire","topic":"Viernes 12, 18:00","links":[{"p":"fa-brands","i":"fa-instagram","label":"Instagram"},{"p":"fa-solid","i":"fa-globe","label":"Web"}]}'></include>
+            <include src="./views/speaker-card.html" locals='{"rootClass":"flex-1 basis-[280px]","badgeClass":"bg-clay","nameClass":"text-lg","discipline":"ceramica","img":"./assets/images/speaker-5.jpg","alt":"Retrato de Pere Montserrat","badge":"Taller","role":"Esmaltes y reduccion","name":"Pere Montserrat","bio":"Investiga esmaltes con cenizas vegetales y minerales locales. Sus piezas se exhiben en museos de Cataluña y Francia.","topicIcon":"fa-screwdriver-wrench","topic":"Sabado 13, sala A","links":[{"p":"fa-solid","i":"fa-globe","label":"Web"}]}'></include>
+            <include src="./views/speaker-card.html" locals='{"rootClass":"flex-1 basis-[280px]","badgeClass":"bg-clay","nameClass":"text-lg","discipline":"textil","img":"./assets/images/speaker-6.jpg","alt":"Retrato de Sara Boix","badge":"Charla","role":"Bordado contemporaneo","name":"Sara Boix","bio":"Combina punto tradicional con motivos urbanos. Su trabajo aparece en la revista Selvedge y en colecciones de moda independiente.","topicIcon":"fa-microphone","topic":"Domingo 14, 17:00","links":[{"p":"fa-brands","i":"fa-instagram","label":"Instagram"}]}'></include>
+            <include src="./views/speaker-card.html" locals='{"rootClass":"flex-1 basis-[280px]","badgeClass":"bg-clay","nameClass":"text-lg","discipline":"madera","img":"./assets/images/speaker-7.jpg","alt":"Retrato de Joaquim Vidal","badge":"Mesa redonda","role":"Talla y escultura","name":"Joaquim Vidal","bio":"Tallista de imagineria y profesor invitado en la Escola d Arts i Oficis. Modera la mesa redonda de cierre del domingo.","topicIcon":"fa-comments","topic":"Domingo 14, 19:00","links":[{"p":"fa-brands","i":"fa-instagram","label":"Instagram"}]}'></include>
+            <include src="./views/speaker-card.html" locals='{"rootClass":"flex-1 basis-[280px]","badgeClass":"bg-clay","nameClass":"text-lg","discipline":"vidrio","img":"./assets/images/speaker-8.jpg","alt":"Retrato de Iria Lago","badge":"Taller","role":"Vitrales emplomados","name":"Iria Lago","bio":"Restauradora de vitrales en edificios historicos. Su taller del sabado introduce a la tecnica del emplomado y el corte de vidrio.","topicIcon":"fa-screwdriver-wrench","topic":"Sabado 13, sala C","links":[{"p":"fa-solid","i":"fa-globe","label":"Web"}]}'></include>
+          </div>
+        </div>
+      </section>
+
+      <!-- Programa por dia: acordeon nativo con <details> (sin JS) -->
+      <section class="bg-cream py-16 md:py-24" aria-labelledby="activities-title">
+        <div class="mx-auto max-w-[1200px] px-4 sm:px-8">
+          <header class="mb-12 text-center">
+            <h2 id="activities-title" class="section-heading mb-4 md:text-headline">Programa por dia</h2>
+            <hr class="mx-auto h-[3px] w-[60px] border-0 bg-clay" />
+          </header>
+
+          <div class="mx-auto max-w-[900px] space-y-3">
+            <details open class="group overflow-hidden rounded-md border border-line bg-white">
+              <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-4 font-serif text-lg text-ink hover:bg-cream [&::-webkit-details-marker]:hidden">
+                Viernes 12 de junio: Oficios del fuego
+                <i class="fa-solid fa-chevron-down text-clay transition group-open:rotate-180" aria-hidden="true"></i>
+              </summary>
+              <div class="border-t border-line p-6">
+                <div class="flex flex-wrap gap-4">
+                  <include src="./views/activity.html" locals='{"time":"11:00 - 12:30","title":"Charla inaugural","description":"A cargo de Margarita Olivares.","location":"Sala principal"}'></include>
+                  <include src="./views/activity.html" locals='{"time":"17:00 - 19:00","title":"Demostracion vidrio","description":"Ana Riquelme sopla una pieza en directo.","location":"Patio"}'></include>
+                  <include src="./views/activity.html" locals='{"time":"20:00 - 21:30","title":"Mercado nocturno","description":"Apertura del mercado con musica en vivo.","location":"Plaza Mayor"}'></include>
+                </div>
+              </div>
+            </details>
+
+            <details class="group overflow-hidden rounded-md border border-line bg-white">
+              <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-4 font-serif text-lg text-ink hover:bg-cream [&::-webkit-details-marker]:hidden">
+                Sabado 13 de junio: Tejidos y fibras
+                <i class="fa-solid fa-chevron-down text-clay transition group-open:rotate-180" aria-hidden="true"></i>
+              </summary>
+              <div class="border-t border-line p-6">
+                <div class="flex flex-wrap gap-4">
+                  <include src="./views/activity.html" locals='{"time":"10:00 - 12:00","title":"Taller de encaje","description":"Lucia Hernandez. Iniciacion al bolillo.","location":"Sala B"}'></include>
+                  <include src="./views/activity.html" locals='{"time":"12:30 - 14:00","title":"Esmaltes con cenizas","description":"Pere Montserrat presenta su investigacion.","location":"Sala A"}'></include>
+                  <include src="./views/activity.html" locals='{"time":"17:00 - 18:30","title":"Vitrales emplomados","description":"Iria Lago. Taller introductorio.","location":"Sala C"}'></include>
+                </div>
+              </div>
+            </details>
+
+            <details class="group overflow-hidden rounded-md border border-line bg-white">
+              <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-4 font-serif text-lg text-ink hover:bg-cream [&::-webkit-details-marker]:hidden">
+                Domingo 14 de junio: Madera y piedra
+                <i class="fa-solid fa-chevron-down text-clay transition group-open:rotate-180" aria-hidden="true"></i>
+              </summary>
+              <div class="border-t border-line p-6">
+                <div class="flex flex-wrap gap-4">
+                  <include src="./views/activity.html" locals='{"time":"12:30 - 13:30","title":"Carpinteria fina","description":"David Pereira: madera local y acabados naturales.","location":"Sala principal"}'></include>
+                  <include src="./views/activity.html" locals='{"time":"17:00 - 18:00","title":"Bordado contemporaneo","description":"Sara Boix conversa con la audiencia.","location":"Sala A"}'></include>
+                  <include src="./views/activity.html" locals='{"time":"19:00 - 20:30","title":"Mesa redonda de cierre","description":"Modera Joaquim Vidal. Participan los ponentes.","location":"Auditorio"}'></include>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/footer.html"></include>
+  </body>
+</html>

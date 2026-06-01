@@ -1,0 +1,17 @@
+// Dependencias externas
+
+// Tailwind v4. Se importa con la extension .css para que Dart Sass lo deje
+// pasar como @import de CSS plano; @tailwindcss/postcss lo resuelve despues.
+@import "tailwindcss/index.css";
+
+// Iconos de FontAwesome (sin el prefijo npm:, lo resuelve PostCSS)
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+// Fuente Playfair Display (titulares)
+@import "@fontsource/playfair-display/400.css";
+@import "@fontsource/playfair-display/700.css";
+
+// Fuente Source Sans Pro (cuerpo de texto)
+@import "@fontsource/source-sans-pro/400.css";
+@import "@fontsource/source-sans-pro/600.css";
+@import "@fontsource/source-sans-pro/700.css";

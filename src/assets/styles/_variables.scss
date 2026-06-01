@@ -1,0 +1,125 @@
+// Variables y tema del sitio "Jornadas de Artesania".
+// El bloque @theme define los tokens de Tailwind v4 (configuracion CSS-first).
+// Las variables Sass ($...) que vienen despues las siguen usando los mixins y
+// los estilos de modulos y paginas que todavia no se han migrado a utilidades.
+
+@theme {
+  // Tipografia
+  --font-sans: "Source Sans Pro", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  // Titulares grandes (los menores usan la escala por defecto de Tailwind)
+  --text-display: 2rem;
+  --text-display--line-height: 1.2;
+  --text-headline: 2.75rem;
+  --text-headline--line-height: 1.15;
+  --text-hero: 4rem;
+  --text-hero--line-height: 1.05;
+
+  // Paleta de marca
+  --color-clay: #b85c2c;
+  --color-clay-dark: #8a3f17;
+  --color-clay-light: #e8a172;
+  --color-terracotta: #d97757;
+  --color-ochre: #d6a93c;
+  --color-ochre-light: #f0d68a;
+  --color-cream: #faf3e6;
+  --color-cream-light: #fdfaf2;
+  --color-wood: #6b4423;
+  --color-wood-light: #9a7547;
+  --color-ink: #2b2018;       // titulos y texto principal
+  --color-muted: #5a4d42;     // texto secundario
+  --color-subtle: #7a6b5e;    // texto terciario
+  --color-line: #e2d5c3;      // bordes y separadores
+  --color-success: #4a7c2c;
+  --color-danger: #b03030;
+  --color-info: #2c6e8f;
+  --color-warning: #c98a1a;
+
+  // Breakpoints (los mismos que usaba el mixin respond-to)
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  // Radios (6px ya equivale a rounded-md por defecto)
+  --radius-lg: 14px;
+  --radius-xl: 24px;
+
+  // Sombras
+  --shadow-sm: 0 2px 4px rgb(43 32 24 / 0.08);
+  --shadow-md: 0 4px 14px rgb(43 32 24 / 0.12);
+  --shadow-lg: 0 10px 28px rgb(43 32 24 / 0.18);
+}
+
+// --- Variables Sass heredadas de la PEC 2 --------------------------------
+// Las usan los mixins y los estilos de modulos/paginas pendientes de migrar.
+
+// Tipografia
+$font-family-heading: "Playfair Display", "Georgia", serif;
+$font-family-body: "Source Sans Pro", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 2.75rem;
+$font-size-hero: 4rem;
+$line-height-base: 1.6;
+$line-height-heading: 1.15;
+
+// Paleta de marca, inspirada en los oficios artesanos tradicionales
+$color-clay: #b85c2c;
+$color-clay-dark: #8a3f17;
+$color-clay-light: #e8a172;
+$color-terracotta: #d97757;
+$color-ochre: #d6a93c;
+$color-ochre-light: #f0d68a;
+$color-cream: #faf3e6;
+$color-cream-light: #fdfaf2;
+$color-wood: #6b4423;
+$color-wood-light: #9a7547;
+$color-ink: #2b2018;
+$color-text: #2b2018;
+$color-text-light: #5a4d42;
+$color-text-muted: #7a6b5e;
+$color-border: #e2d5c3;
+$color-white: #ffffff;
+$color-success: #4a7c2c;
+$color-danger: #b03030;
+$color-info: #2c6e8f;
+$color-warning: #c98a1a;
+
+// Capa translucida para overlays
+$color-overlay: rgba(43, 32, 24, 0.55);
+
+// Espaciado
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-2xl: 4rem;
+$spacing-3xl: 6rem;
+
+// Breakpoints (mobile first)
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+
+// Layout
+$max-width: 1200px;
+$site-radius: 6px;
+$site-radius-lg: 14px;
+$site-radius-xl: 24px;
+
+// Sombras
+$shadow-sm: 0 2px 4px rgba(43, 32, 24, 0.08);
+$shadow-md: 0 4px 14px rgba(43, 32, 24, 0.12);
+$shadow-lg: 0 10px 28px rgba(43, 32, 24, 0.18);
+
+// Transiciones
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Jornadas de Artesania: tres dias de talleres, charlas y exposiciones sobre los oficios artesanos tradicionales. Organizadas con el Ayuntamiento."
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
+    <script type="module" src="./assets/scripts/main.js"></script>
+    <title>Jornadas de Artesania | Tres dias dedicados al oficio</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <include src="./views/header.html"></include>
+
+    <main id="main-content">
+      <!-- Cartel principal -->
+      <section class="hero-bg relative overflow-hidden py-16 text-white md:py-24" aria-labelledby="hero-title">
+        <div class="mx-auto max-w-[1200px] px-4 sm:px-8">
+          <div class="grid items-center gap-8 md:grid-cols-[1.3fr_1fr] md:gap-10 lg:gap-14">
+            <div class="flex flex-col items-start gap-6">
+              <span class="pill flex items-center gap-2 bg-ochre-light uppercase tracking-wide text-ink">
+                <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                12 al 14 de junio de 2026
+              </span>
+
+              <h1 id="hero-title" class="font-serif text-headline font-bold text-white md:text-hero lg:text-[5.5rem]">
+                Jornadas de <em class="text-ochre-light">Artesania</em>
+              </h1>
+
+              <p class="text-lg text-cream">
+                Tres dias para descubrir oficios milenarios, conversar con maestras y maestros artesanos, y sumarse a talleres practicos en el corazon de la ciudad.
+              </p>
+
+              <dl class="m-0 w-full rounded-md border-l-4 border-ochre bg-white/10 p-6 backdrop-blur">
+                <dt class="text-sm font-semibold uppercase tracking-wide text-ochre-light">Sede</dt>
+                <dd class="mb-2 font-serif text-lg text-white">Casa de Cultura</dd>
+                <dt class="text-sm font-semibold uppercase tracking-wide text-ochre-light">Aforo</dt>
+                <dd class="mb-2 font-serif text-lg text-white">250 plazas por sesion</dd>
+                <dt class="text-sm font-semibold uppercase tracking-wide text-ochre-light">Entrada</dt>
+                <dd class="m-0 font-serif text-lg text-white">Gratuita con inscripcion previa</dd>
+              </dl>
+
+              <div class="flex flex-wrap gap-4">
+                <a href="#" class="btn btn-clay">
+                  <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+                  Reservar plaza
+                </a>
+                <a href="./ponentes.html" class="btn btn-cream-outline">Ver ponentes</a>
+              </div>
+            </div>
+
+            <div class="relative aspect-[3/4] overflow-hidden rounded-lg shadow-lg">
+              <img src="./assets/images/poster.jpg" alt="" class="h-full w-full object-cover" />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-clay-dark/40 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banda de informacion practica -->
+      <section class="bg-cream py-16 md:py-24" aria-labelledby="info-title">
+        <div class="mx-auto max-w-[1200px] px-4 sm:px-8">
+          <h2 id="info-title" class="sr-only">Informacion practica</h2>
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <include src="./views/info-item.html" locals='{"icon":"fa-clock","title":"Horarios","text":"De 10:00 a 21:00 los tres dias. Talleres en franjas de mañana y tarde."}'></include>
+            <include src="./views/info-item.html" locals='{"icon":"fa-location-dot","title":"Como llegar","text":"Casa de Cultura, plaza Mayor. Aparcamiento publico a 200 metros."}'></include>
+            <include src="./views/info-item.html" locals='{"icon":"fa-universal-access","title":"Accesibilidad","text":"Acceso adaptado, sillas de ruedas disponibles y bucle magnetico en sala principal."}'></include>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tarjetas destacadas con container queries -->
+      <section class="py-16 md:py-24" aria-labelledby="highlights-title">
+        <div class="mx-auto max-w-[1200px] px-4 sm:px-8">
+          <header class="mb-12 text-center">
+            <h2 id="highlights-title" class="section-heading mb-4 md:text-headline">Tres dias, tres miradas</h2>
+            <hr class="mx-auto mb-4 h-[3px] w-[60px] border-0 bg-clay" />
+            <p class="mx-auto max-w-[640px] text-lg text-muted">
+              Cada jornada se centra en una familia de oficios. Mira el avance del programa y elige por donde quieres empezar.
+            </p>
+          </header>
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <include src="./views/highlight-card.html" locals='{"img":"./assets/images/highlight-fire.jpg","alt":"Manos de un alfarero modelando una pieza al torno","tag":"Viernes 12","title":"Oficios del fuego","text":"Alfareria, vidrio soplado y forja. Demostraciones en directo a cargo de cinco talleres locales."}'></include>
+            <include src="./views/highlight-card.html" locals='{"img":"./assets/images/highlight-fiber.jpg","alt":"Tejedora trabajando en un telar de madera","tag":"Sabado 13","title":"Tejidos y fibras","text":"Encajes, tapiz, cesteria y bordado tradicional. Talleres familiares de iniciacion para todas las edades."}'></include>
+            <include src="./views/highlight-card.html" locals='{"img":"./assets/images/highlight-wood.jpg","alt":"Carpintero trabajando una pieza con gubias","tag":"Domingo 14","title":"Madera y piedra","text":"Carpinteria fina, talla y canteria. Mesa redonda de cierre con artesanas y artesanos de toda la provincia."}'></include>
+            <include src="./views/highlight-card.html" locals='{"img":"./assets/images/highlight-market.jpg","alt":"Mercado de artesania al aire libre","tag":"Todos los dias","title":"Mercado artesano","text":"Mas de 30 puestos en la plaza Mayor con piezas unicas hechas a mano. Acceso libre."}'></include>
+            <include src="./views/highlight-card.html" locals='{"img":"./assets/images/highlight-kids.jpg","alt":"Niños pintando en un taller infantil","tag":"Sabado y domingo","title":"Espacio infantil","text":"Taller permanente para niños de 5 a 12 años. Cada sesion termina con una pieza para llevar a casa."}'></include>
+            <include src="./views/highlight-card.html" locals='{"img":"./assets/images/highlight-talks.jpg","alt":"Sala llena en una conferencia","tag":"Tarde-noche","title":"Charlas abiertas","text":"Conferencias breves, de 30 minutos cada una, sobre el futuro de los oficios y las nuevas generaciones."}'></include>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galeria promocional (carrusel estatico: el JS de Bootstrap no se reescribe) -->
+      <section class="pb-16 md:pb-24" aria-labelledby="carousel-title">
+        <div class="mx-auto max-w-[1200px] px-4 sm:px-8">
+          <h2 id="carousel-title" class="sr-only">Galeria destacada</h2>
+          <div class="relative overflow-hidden rounded-lg">
+            <img src="./assets/images/carousel-1.jpg" alt="Manos trabajando arcilla" class="block w-full" />
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-ink/90 via-ink/50 to-transparent"></div>
+
+            <div class="absolute inset-x-0 bottom-10 z-10 mx-auto hidden max-w-[640px] rounded-lg bg-ink/35 px-4 py-3 text-center text-white backdrop-blur-sm md:block">
+              <h3 class="font-serif text-xl text-white">Tradicion en cada pieza</h3>
+              <p class="m-0 text-white">Mas de cuarenta talleres locales preparan piezas exclusivas para las jornadas.</p>
+            </div>
+
+            <div class="absolute inset-x-0 bottom-4 z-10 flex justify-center gap-2">
+              <span class="h-1.5 w-8 rounded-full bg-white"></span>
+              <span class="h-1.5 w-8 rounded-full bg-white/50"></span>
+              <span class="h-1.5 w-8 rounded-full bg-white/50"></span>
+            </div>
+
+            <span class="absolute left-3 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-ink/30 text-white" aria-hidden="true">
+              <i class="fa-solid fa-chevron-left"></i>
+            </span>
+            <span class="absolute right-3 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-ink/30 text-white" aria-hidden="true">
+              <i class="fa-solid fa-chevron-right"></i>
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <include src="./views/footer.html"></include>
+  </body>
+</html>

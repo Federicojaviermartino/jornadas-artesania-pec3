@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Concurso de Artesania 2026: las piezas de los mejores participantes del concurso municipal de oficios artesanos."
+    />
+    <title>Concurso de Artesania 2026 | Participantes</title>
+    <style>
+      /* Pagina del concurso: HTML con CSS propio (sin Tailwind), maquetada a
+         partir del diseno de Figma. Autocontenida en este mismo fichero. */
+      :root {
+        --cc-text: #1a1a1a;
+        --cc-muted: #6b7280;
+        --cc-line: #e5e7eb;
+        --cc-bg: #ffffff;
+        --cc-dark: #111827;
+        --cc-max: 1080px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+        color: var(--cc-text);
+        background-color: var(--cc-bg);
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .cc-container {
+        width: 100%;
+        max-width: var(--cc-max);
+        padding: 0 24px;
+        margin: 0 auto;
+      }
+
+      /* ---- Cabecera ---- */
+      .cc-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 0;
+      }
+
+      .cc-brand {
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .cc-menu {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .cc-menu a {
+        font-size: 14px;
+        color: var(--cc-muted);
+      }
+
+      .cc-menu a:hover {
+        color: var(--cc-text);
+      }
+
+      .cc-btn {
+        padding: 9px 18px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        background-color: var(--cc-dark);
+        border-radius: 6px;
+      }
+
+      .cc-btn:hover {
+        background-color: #000;
+      }
+
+      /* ---- Hero ---- */
+      .cc-hero {
+        padding: 64px 0 8px;
+        text-align: center;
+      }
+
+      .cc-hero h1 {
+        margin: 0 0 14px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 44px;
+        font-weight: 700;
+      }
+
+      .cc-hero p {
+        max-width: 520px;
+        margin: 0 auto;
+        color: var(--cc-muted);
+      }
+
+      .cc-hero-img {
+        width: 100%;
+        height: 360px;
+        margin-top: 40px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      /* ---- Seccion de piezas ---- */
+      .cc-section {
+        padding: 64px 0;
+      }
+
+      .cc-section__title {
+        margin: 0 0 4px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      .cc-section__lead {
+        margin: 0 0 36px;
+        color: var(--cc-muted);
+      }
+
+      .cc-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+
+      .cc-card {
+        padding: 24px;
+        background-color: #fff;
+        border: 1px solid var(--cc-line);
+        border-radius: 10px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+
+      .cc-card h3 {
+        margin: 0 0 10px;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .cc-card p {
+        margin: 0 0 22px;
+        font-size: 14px;
+        color: var(--cc-muted);
+      }
+
+      .cc-author {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .cc-author img {
+        width: 38px;
+        height: 38px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .cc-author strong {
+        display: block;
+        font-size: 14px;
+      }
+
+      .cc-author span {
+        font-size: 13px;
+        color: var(--cc-muted);
+      }
+
+      /* ---- Pie ---- */
+      .cc-footer {
+        padding: 40px 0 56px;
+        border-top: 1px solid var(--cc-line);
+      }
+
+      .cc-footer__grid {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr 1fr 1fr;
+        gap: 28px;
+      }
+
+      .cc-footer__brand {
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .cc-social {
+        display: flex;
+        gap: 14px;
+        margin-top: 18px;
+        color: var(--cc-muted);
+      }
+
+      .cc-social svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
+      }
+
+      .cc-social a:hover {
+        color: var(--cc-text);
+      }
+
+      .cc-col h4 {
+        margin: 0 0 12px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--cc-muted);
+      }
+
+      .cc-col ul {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        list-style: none;
+      }
+
+      .cc-col li {
+        margin-bottom: 8px;
+      }
+
+      /* ---- Responsive ---- */
+      @media (max-width: 860px) {
+        .cc-grid {
+          grid-template-columns: 1fr;
+        }
+        .cc-footer__grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .cc-menu {
+          gap: 16px;
+        }
+        .cc-hero h1 {
+          font-size: 34px;
+        }
+        .cc-footer__grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="cc-container">
+      <nav class="cc-nav">
+        <a href="./index.html" class="cc-brand">Concurso de Artesania 2026</a>
+        <div class="cc-menu">
+          <a href="./index.html">Inicio</a>
+          <a href="#concurso">El concurso</a>
+          <a href="#piezas">Piezas</a>
+          <a href="#piezas" class="cc-btn">Participantes</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="cc-container cc-hero" id="concurso">
+        <h1>Participantes</h1>
+        <p>Esta seccion describe las piezas de los mejores participantes del concurso.</p>
+        <img
+          class="cc-hero-img"
+          src="./assets/images/carousel-2.jpg"
+          alt="Taller de artesania con herramientas y materiales sobre la mesa"
+        />
+      </section>
+
+      <section class="cc-container cc-section" id="piezas">
+        <h2 class="cc-section__title">Las piezas</h2>
+        <p class="cc-section__lead">Estas son las piezas de los mejores participantes.</p>
+
+        <div class="cc-grid">
+          <article class="cc-card">
+            <h3>Cantaro vidriado</h3>
+            <p>Pieza torneada y vidriada a alta temperatura, inspirada en la alfareria medieval de la comarca.</p>
+            <div class="cc-author">
+              <img src="./assets/images/speaker-1.jpg" alt="Retrato de Margarita Olivares" />
+              <div>
+                <strong>Margarita Olivares</strong>
+                <span>Ceramica · 2026</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cc-card">
+            <h3>Cesto de mimbre</h3>
+            <p>Cesteria trenzada a mano con fibras locales, un oficio que combina paciencia y geometria.</p>
+            <div class="cc-author">
+              <img src="./assets/images/speaker-2.jpg" alt="Retrato de Lucia Hernandez" />
+              <div>
+                <strong>Lucia Hernandez</strong>
+                <span>Fibras · 2025</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="cc-card">
+            <h3>Bandeja de nogal</h3>
+            <p>Talla en madera de nogal con acabados naturales al aceite, sin barnices sinteticos.</p>
+            <div class="cc-author">
+              <img src="./assets/images/speaker-3.jpg" alt="Retrato de David Pereira" />
+              <div>
+                <strong>David Pereira</strong>
+                <span>Madera · 2024</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="cc-footer">
+      <div class="cc-container cc-footer__grid">
+        <div>
+          <p class="cc-footer__brand">Concurso de Artesania 2026</p>
+          <div class="cc-social">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 22v-8h3l1-4h-4V8c0-1 .3-2 1.8-2H17V2.1C16.6 2 15.5 2 14.3 2 11.7 2 10 3.6 10 6.5V10H7v4h3v8h3z"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 7A1.9 1.9 0 105 5.1 1.9 1.9 0 006.9 7zM5.4 8.5h3V22h-3zM10.5 8.5h2.9v1.8h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8V22h-3v-6c0-1.4 0-3.2-2-3.2s-2.3 1.6-2.3 3.1V22h-3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c2.7 0 3 0 4.1.1 1 0 1.7.2 2.3.4.6.2 1.1.5 1.6 1 .5.5.8 1 1 1.6.2.6.4 1.3.4 2.3.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c0 1-.2 1.7-.4 2.3-.2.6-.5 1.1-1 1.6-.5.5-1 .8-1.6 1-.6.2-1.3.4-2.3.4-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-1 0-1.7-.2-2.3-.4-.6-.2-1.1-.5-1.6-1-.5-.5-.8-1-1-1.6-.2-.6-.4-1.3-.4-2.3C2 15 2 14.7 2 12s0-3 .1-4.1c0-1 .2-1.7.4-2.3.2-.6.5-1.1 1-1.6.5-.5 1-.8 1.6-1 .6-.2 1.3-.4 2.3-.4C9 2 9.3 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.5s-.2-1.6-.9-2.3c-.8-.9-1.7-.9-2.2-1C16.8 4 12 4 12 4s-4.8 0-7.9.2c-.5.1-1.4.1-2.2 1C1.2 5.9 1 7.5 1 7.5S.8 9.4.8 11.3v1.4C.8 14.6 1 16.5 1 16.5s.2 1.6.9 2.3c.8.9 1.9.9 2.4 1 1.7.1 7.7.2 7.7.2s4.8 0 7.9-.2c.5-.1 1.4-.1 2.2-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 14.6V8.9l5 2.9z"/></svg></a>
+          </div>
+        </div>
+        <div class="cc-col">
+          <h4>Piezas</h4>
+          <ul>
+            <li>Cantaro vidriado</li>
+            <li>Cesto de mimbre</li>
+            <li>Bandeja de nogal</li>
+          </ul>
+        </div>
+        <div class="cc-col">
+          <h4>Participantes</h4>
+          <ul>
+            <li>Margarita Olivares</li>
+            <li>Lucia Hernandez</li>
+            <li>David Pereira</li>
+          </ul>
+        </div>
+        <div class="cc-col">
+          <h4>Ediciones</h4>
+          <ul>
+            <li>2026</li>
+            <li>2025</li>
+            <li>2024</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

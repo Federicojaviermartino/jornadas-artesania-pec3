@@ -1,0 +1,69 @@
+// Componentes extraidos con @apply (capa "components" de Tailwind v4).
+// Patrones de utilidades que se repiten en varias paginas: cuando un grupo
+// de clases aparece muchas veces, se encapsula aqui en una sola clase.
+// Ver https://tailwindcss.com/docs/styling-with-utility-classes#managing-duplication
+
+@layer components {
+  // 1. Boton base (cabecera, hero, llamadas a la accion)
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 font-semibold no-underline transition;
+  }
+
+  // 2. Boton solido de marca
+  .btn-clay {
+    @apply bg-clay text-white;
+  }
+
+  .btn-clay:hover {
+    @apply bg-clay-dark text-white;
+  }
+
+  // 3. Boton fantasma sobre fondos oscuros (hero)
+  .btn-cream-outline {
+    @apply border-2 border-cream text-cream;
+  }
+
+  .btn-cream-outline:hover {
+    @apply bg-cream-light text-ink;
+  }
+
+  // 4. Boton-pildora de filtro (pagina de ponentes); .active lo activa el JS
+  .btn-filter {
+    @apply rounded-full border border-clay bg-white px-4 py-2 text-sm font-semibold text-clay-dark transition;
+  }
+
+  .btn-filter:hover,
+  .btn-filter.active {
+    @apply bg-clay text-white;
+  }
+
+  // 5. Etiqueta tipo pildora (badges y tags); el color se pasa por utilidad
+  .pill {
+    @apply inline-block rounded-full px-3 py-1 text-sm font-semibold;
+  }
+
+  // 6. Tarjeta blanca con borde (destacados, ponentes, actividades)
+  .card {
+    @apply overflow-hidden rounded-lg border border-line bg-white;
+  }
+
+  // 7. Titular de seccion en tipografia serif
+  .section-heading {
+    @apply font-serif text-display font-bold leading-tight text-ink;
+  }
+
+  // 8. Fondos decorativos de marca (gradientes del hero y del banner interior).
+  // Se mantienen como CSS porque un gradiente multicapa con posiciones no es
+  // comodo de expresar solo con utilidades.
+  .hero-bg {
+    background:
+      linear-gradient(135deg, rgba(43, 32, 24, 0.78), rgba(138, 63, 23, 0.6)),
+      radial-gradient(ellipse at top right, #d6a93c 0%, #b85c2c 35%, #6b4423 70%, #2b2018 100%);
+  }
+
+  .banner-bg {
+    background:
+      linear-gradient(135deg, rgba(43, 32, 24, 0.85), rgba(138, 63, 23, 0.75)),
+      radial-gradient(circle at 20% 30%, #b85c2c 0%, #6b4423 60%, #2b2018 100%);
+  }
+}

@@ -1,0 +1,38 @@
+<header class="sticky top-0 z-40 border-b border-line bg-cream-light shadow-sm">
+  <nav class="mx-auto flex max-w-[1200px] items-center justify-between px-4 py-4 sm:px-8" aria-label="Navegacion principal">
+    <a href="./index.html" class="flex items-center gap-2 font-serif text-lg font-bold text-ink transition hover:text-clay-dark">
+      <i class="fa-solid fa-hammer text-clay" aria-hidden="true"></i>
+      Jornadas de Artesania
+    </a>
+
+    <!-- Boton hamburguesa: solo en movil/tablet. Sin JS (segun enunciado),
+         es un elemento visual: muestra el icono pero no despliega el menu. -->
+    <button
+      type="button"
+      class="inline-flex items-center justify-center rounded-md p-2 text-2xl text-ink lg:hidden"
+      aria-label="Mostrar la navegacion"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <!-- Menu de escritorio -->
+    <div class="hidden items-center gap-6 lg:flex">
+      <ul class="m-0 flex list-none items-center gap-6 p-0">
+        <li>
+          <a href="./index.html" class="site-header__link font-semibold text-ink transition hover:text-clay-dark aria-[current=page]:text-clay-dark">Portada</a>
+        </li>
+        <li>
+          <a href="./ponentes.html" class="site-header__link font-semibold text-ink transition hover:text-clay-dark aria-[current=page]:text-clay-dark">Ponentes</a>
+        </li>
+        <li>
+          <a href="./concurso.html" class="site-header__link font-semibold text-ink transition hover:text-clay-dark aria-[current=page]:text-clay-dark">Concurso</a>
+        </li>
+      </ul>
+      <a href="#" class="btn btn-clay">
+        <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+        Reservar plaza
+      </a>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,54 @@
+// Estilos base del sitio (capa "base" de Tailwind).
+// Solo lo que no es comodo resolver con utilidades: tipografia global,
+// color de enlaces y fondo. Tailwind Preflight ya aplica el reset.
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    line-height: 1.6;
+    color: var(--color-ink);
+    background-color: var(--color-cream-light);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    line-height: 1.15;
+    color: var(--color-ink);
+  }
+
+  a {
+    color: var(--color-clay-dark);
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-clay);
+  }
+}
+
+// Enlace para saltar al contenido (accesibilidad): se oculta arriba
+// y aparece al recibir el foco con el teclado.
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 1rem;
+  z-index: 50;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--color-clay-dark);
+  border-radius: 6px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}

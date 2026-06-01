@@ -1,0 +1,12 @@
+// Jornadas de Artesania - PEC3 (utility-first con Tailwind v4)
+// Orden de carga:
+//   1. Variables y tema (@theme de Tailwind v4 + paleta heredada)
+//   2. Dependencias externas (Tailwind, FontAwesome, Fontsource)
+//   3. Estilos base (capa "base")
+//   4. Componentes extraidos con @apply (capa "components")
+
+@import "variables";
+@import "dependencies";
+
+@import "modules/base";
+@import "modules/components";
